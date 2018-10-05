@@ -21,4 +21,10 @@ functions.
 In the python folder, a file zlocal_c.py is the zlocal.py on my pi system c. It drives a Pimoroni blinkt. I have already published a go version of this, that I could have used.
 
 
-Output from example zreqtest.go is in output.txt:
+Output from example zreqtest.go is in output.txt
+
+To run the python3 programs, you will need to :-
+
+sudo apt-get install python-zmq
+
+sudo pip3 install pyzmq
