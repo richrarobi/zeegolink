@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 # zlocal.py
 from time import sleep
-# import subprocess
+import subprocess
 import blinkt
 import Adafruit_BMP.BMP085 as BMP085
 
-def sysType():
+def sysType(a):
     tmp = exeCmd("cat /proc/cpuinfo")
     for line in tmp.splitlines():
         if "model name" in line:
             x = line[13: ]
     return x
 
-def cpuTemp():
-    if "ARM" in sysType():
+def cpuTemp(a):
+    if "ARM" in sysType(""):
         import subprocess
         tmp = exeCmd("/opt/vc/bin/vcgencmd measure_temp")
         return tmp
@@ -34,6 +34,17 @@ def exeCmd(cmnd):
     return out
 
 def datim():
+    import datetime
+    now = datetime.datetime.now()
+    x = str(now)
+    y, z = x.split(" ")
+    y, m, d = y.split("-")
+    hh, mm, ss = z.split(":")
+    ss, dec = ss.split(".")
+    stmp = "{}-{}-{} {}:{}:{}".format(y, m, d, hh, mm, ss)
+    return stmp
+
+def datim(a):
     import datetime
     now = datetime.datetime.now()
     x = str(now)
@@ -100,9 +111,9 @@ def getRoomTemp():
 
 if __name__ == "__main__":
 # test only....
-    print(sysType())
-    print(cpuTemp())
-    print(datim())
+    print(sysType(""))
+    print(cpuTemp(""))
+    print(datim(""))
 #    print(getRoomTemp())
 #    print(getBaro())   
     try:
