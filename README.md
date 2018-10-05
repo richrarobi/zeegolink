@@ -1,5 +1,5 @@
 # zeegolink
-go and python intercommunication using zeromq4
+go and python intercommunication using zeromq4 ("github.com/pebbe/zmq4")
 
 reply servers written in go and python3 allow requests in go or pyhon to run functions
 in either language on locally connected systems.
