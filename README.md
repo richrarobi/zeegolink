@@ -15,6 +15,7 @@ library in zlocal.py - see the example in zreqtest.go, and the zbeat.py.
 NOTE that all json parameters are string, and variables such as integers need to
 be converted for use. Also note that there are dummy parameters in some of the python
 functions.
+In the python folder, a file zlocal_c.py is the zlocal.py on my pi system c. It drives a Pimoroni blinkt. I have already published a go version of this, that I could have used.
 
 
 Output from example zreqtest.go follows:
