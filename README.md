@@ -20,6 +20,7 @@ functions.
 Output from example zreqtest.go follows:
 
 ./zreqtest
+
 Received 1 Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz
 
 Received 2 Intel(R) Core(TM) i5-4670K CPU @ 3.40GHz
