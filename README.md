@@ -20,6 +20,7 @@ be converted for use. Also note that there are dummy parameters in some of the p
 functions.
 In the python folder, a file zlocal_c.py is the zlocal.py on my pi system c. It drives a Pimoroni blinkt. I have already published a go version of this, that I could have used.
 
+Currently having an issue with zmq when a reply server is stopped, the request will not then reconnect after restart. This doesn't seem to happen with nanomsg- mangos.... 
 
 Output from example zreqtest.go is in output.txt
 
